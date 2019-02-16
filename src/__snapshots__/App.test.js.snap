@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <h2>
+    Temperature finder
+  </h2>
+  <div
+    className="searchBar"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search for a city..."
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+      value=""
+    >
+      Search
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 2`] = `null`;
+
+exports[`renders correctly 3`] = `
+<div
+  className="searchBar"
+>
+  <input
+    placeholder="Search for a city..."
+    type="text"
+  />
+  <button>
+    Search
+  </button>
+</div>
+`;
+
+exports[`renders correctly 4`] = `null`;
