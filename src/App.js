@@ -47,28 +47,19 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.show) {
-      return (
-        <div className="App">
-          <h2>Temperature finder</h2>
-          <SearchBar searchterm={this.state.searchterm} fetchData={this.fetchData} handleChange={this.handleChange} />
+    return (
+      <div className="App">
+        <h2>Temperature finder</h2>
+        <SearchBar searchterm={this.state.searchterm} fetchData={this.fetchData} handleChange={this.handleChange} />
+        {this.state.show ?
           <Alert className="alert" dismissible variant="warning">
             <p>Could not find location.</p>
           </Alert>
-          <SearchResult name={this.state.name} temp={this.state.temp} addToList={this.addtoList} />
-          <List cities={this.state.cities} delFromList={this.delFromList} />
-        </div>
-      );
-    } else {
-      return (
-        <div className="App">
-          <h2>Temperature finder</h2>
-          <SearchBar searchterm={this.state.searchterm} fetchData={this.fetchData} handleChange={this.handleChange} />
-          <SearchResult name={this.state.name} temp={this.state.temp} addToList={this.addtoList} />
-          <List cities={this.state.cities} delFromList={this.delFromList} />
-        </div>
-      );
-    }
+          : null}
+        <SearchResult name={this.state.name} temp={this.state.temp} addToList={this.addtoList} />
+        <List cities={this.state.cities} delFromList={this.delFromList} />
+      </div>
+    );
   }
 }
 
