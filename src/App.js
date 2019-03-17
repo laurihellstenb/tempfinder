@@ -51,11 +51,10 @@ class App extends Component {
       <div className="App">
         <h2>Temperature finder</h2>
         <SearchBar searchterm={this.state.searchterm} fetchData={this.fetchData} handleChange={this.handleChange} />
-        {this.state.show ?
+        {this.state.show &&
           <Alert className="alert" dismissible variant="warning">
             <p>Could not find location.</p>
-          </Alert>
-          : null}
+          </Alert>}
         <SearchResult name={this.state.name} temp={this.state.temp} addToList={this.addtoList} />
         <List cities={this.state.cities} delFromList={this.delFromList} />
       </div>
